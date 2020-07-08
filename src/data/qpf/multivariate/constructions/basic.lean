@@ -32,7 +32,7 @@ Show that every mvqpf is a lawful mvfunctor.
 protected theorem id_map {α : typevec n} (x : F α) : typevec.id <$$> x = x :=
 by { rw ←abs_repr x, cases repr x with a f, rw [←abs_map], reflexivity }
 
-theorem comp_map {α β γ : typevec n} (f : α ⟹ β) (g : β ⟹ γ) (x : F α) :
+@[simp] theorem comp_map {α β γ : typevec n} (f : α ⟹ β) (g : β ⟹ γ) (x : F α) :
   (g ⊚ f) <$$> x = g <$$> f <$$> x :=
 by { rw ←abs_repr x, cases repr x with a f, rw [←abs_map, ←abs_map, ←abs_map], reflexivity }
 
