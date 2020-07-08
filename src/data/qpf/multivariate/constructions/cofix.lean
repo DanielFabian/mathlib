@@ -8,7 +8,7 @@ The initial algebra of a multivariate qpf is again a qpf.
 import data.qpf.multivariate.pfunctor.basic
 import data.qpf.multivariate.pfunctor.M
 import data.qpf.multivariate.constructions.basic
-       data.qpf.multivariate.functor
+import data.qpf.multivariate.functor
 
 universe u
 
