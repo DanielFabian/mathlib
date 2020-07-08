@@ -39,7 +39,7 @@ inductive fin' : ℕ → Type
 
 def fin'.elim0 {α} : fin' 0 → α .
 
-def typevec' (n : ℕ) := fin' n → Sort*
+def ptypevec (n : ℕ) := fin' n → Sort*
 def typevec (n : ℕ) := typevec'.{u+1} n
 
 namespace typevec
