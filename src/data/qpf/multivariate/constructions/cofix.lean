@@ -34,7 +34,7 @@ def is_precongr {α : typevec n} (r : q.P.M α → q.P.M α → Prop) : Prop :=
 def Mcongr {α : typevec n} (x y : q.P.M α) : Prop :=
 ∃ r, is_precongr r ∧ r x y
 
-def cofix (F : typevec (n + 1) → Type u) [mvfunctor F] [q : mvqpf F] (α : typevec n):=
+def cofix (F : typevec (n + 1) → Type u) [mvfunctor F] [q : mvqpf F] (α : typevec n) :=
 quot (@Mcongr _ F _ q α)
 
 def cofix.map {α β : typevec n} (g : α ⟹ β) : cofix F α → cofix F β :=
